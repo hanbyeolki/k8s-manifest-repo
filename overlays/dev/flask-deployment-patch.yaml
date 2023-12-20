@@ -1,12 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-flask-backend
+  name: demo-frontend
   namespace: default
   labels:
     env: dev
 spec:
-  replicas: 3
   selector:
     matchLabels:
       app: demo-flask-backend

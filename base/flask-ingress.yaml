@@ -4,7 +4,11 @@ kind: Ingress
 metadata:
     name: "flask-backend-ingress"
     namespace: default
-
+    annotations:
+      alb.ingress.kubernetes.io/scheme: internet-facing
+      alb.ingress.kubernetes.io/target-type: ip
+      alb.ingress.kubernetes.io/group.name: eks-demo-group
+      alb.ingress.kubernetes.io/group.order: '1'
 spec:
     ingressClassName: alb
     rules:
@@ -15,3 +19,5 @@ spec:
             backend:
               service:
                 name: "demo-flask-backend"
+                port:
+                  number: 80

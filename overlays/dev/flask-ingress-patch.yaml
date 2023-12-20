@@ -1,20 +1,12 @@
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-    name: "flask-backend-ingress"
-    namespace: default
-    annotations:
-      alb.ingress.kubernetes.io/scheme: internet-facing
-      alb.ingress.kubernetes.io/target-type: ip
-      alb.ingress.kubernetes.io/group.name: eks-demo-group
-      alb.ingress.kubernetes.io/group.order: '1'
+  name: "flask-backend-ingress"
 spec:
-    ingressClassName: alb
-    rules:
+  rules:
     - http:
         paths:
-          - path: /
+          - path: /new-path
             pathType: Prefix
             backend:
               service:
