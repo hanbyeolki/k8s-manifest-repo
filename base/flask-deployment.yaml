@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: demo-flask-backend
-          image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/demo-flask-backend:latest
+          image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/demo-flask-backend:new-tag
           imagePullPolicy: Always
           ports:
             - containerPort: 80
