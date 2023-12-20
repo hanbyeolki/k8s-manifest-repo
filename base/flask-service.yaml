@@ -5,6 +5,8 @@ metadata:
   name: demo-flask-backend
   annotations:
     alb.ingress.kubernetes.io/healthcheck-path: "/"
+  labels:
+    env: dev
 spec:
   selector:
     app: demo-flask-backend
