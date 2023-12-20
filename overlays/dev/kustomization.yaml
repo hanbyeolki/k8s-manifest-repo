@@ -5,7 +5,7 @@ images:
   newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
   newTag: c90d8c1e
 resources:
-- ../base
+- ../../base
 patchesStrategicMerge:
 - flask-deployment-patch.yaml
 - flask-service-patch.yaml
