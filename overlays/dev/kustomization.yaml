@@ -9,4 +9,3 @@ resources:
 patchesStrategicMerge:
 - flask-deployment-patch.yaml
 - flask-service-patch.yaml
-- flask-ingress-patch.yaml
