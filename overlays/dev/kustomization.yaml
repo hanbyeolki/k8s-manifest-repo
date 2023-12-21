@@ -3,7 +3,7 @@ kind: Kustomization
 images:
 - name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
   newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
-  newTag: abbb2574
+  newTag: 5a42ccbc
 resources:
 - ../../base
 patchesStrategicMerge:
