@@ -4,8 +4,8 @@ images:
 - name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
   newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
   newTag: e34f22a4
-- name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/nginx-flask-proxy
-  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/nginx-flask-proxy
+- name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-nginx
+  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-nginx
   newTag: 512d4ffa
 resources:
 - ../../base
