@@ -3,11 +3,14 @@ kind: Kustomization
 images:
 - name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
   newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
-  newTag: e34f22a4
+  newTag: 512d4ffa
+- name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/nginx-flask-proxy
+  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/nginx-flask-proxy
+  newTag: 512d4ffa
 resources:
 - ../../base
 patchesStrategicMerge:
 - flask-deployment-patch.yaml
 - flask-service-patch.yaml
 - nginx-deployment-patch.yaml
-- nginx-service-patch.yaml
+- flask-service-patch.yaml

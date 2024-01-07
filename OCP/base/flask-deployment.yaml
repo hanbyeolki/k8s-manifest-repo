@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: team3-flask
+  namespace: team3
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: team3-flask
+  template:
+    metadata:
+      labels:
+        app: team3-flask
+    spec:
+      containers:
+        - name: team3-flask
+          image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-flask-proxy
+  namespace: team3
+  labels:
+    env: dev
+spec:
+  selector:
+    matchLabels:
+      app: nginx-flask-proxy
+  template:
+    metadata:
+      labels:
+        app: nginx-flask-proxy
