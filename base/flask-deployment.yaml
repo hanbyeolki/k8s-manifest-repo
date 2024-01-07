@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demo-flask-backend
-  namespace: default
+  name: team3-flask
+  namespace: team3
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: demo-flask-backend
+      app: team3-flask
   template:
     metadata:
       labels:
-        app: demo-flask-backend
+        app: team3-flask
     spec:
       containers:
-        - name: demo-flask-backend
+        - name: team3-flask
           image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/3team-flask
           imagePullPolicy: Always
           ports:
