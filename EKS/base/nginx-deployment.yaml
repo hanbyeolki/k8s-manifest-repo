@@ -17,6 +17,6 @@ spec:
         nodetype: nginx-node
       containers:
       - name: nginx-flask-proxy
-        image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/nginx-flask-proxy
+        image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx
         ports:
         - containerPort: 80
