@@ -1,4 +1,3 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,19 +13,19 @@ spec:
       labels:
         app: team3-flask
     spec:
+      imagePullSecrets:
+        - name: ecr-registry
       containers:
-      - name: team3-flask
-        image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 80
-        volumeMounts:
-        - name: aws-secret-volume
-          mountPath: "/home/aws/credentials"
+        - name: team3-flask
+          image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-openshift
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          volumeMounts:
+            - name: aws-secret-volume
+              mountPath: "/home/aws/credentials"
+              readOnly: true
       volumes:
         - name: aws-secret-volume
           secret:
             secretName: aws-credentials
-      imagePullSecrets:
-      - name: ecr-registry
-      - name: aws-credentials
