@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: team3-flask
-  namespace: team3
+  name: demo-flask-backend
+  namespace: default
   annotations:
     alb.ingress.kubernetes.io/healthcheck-path: "/"
   labels:
     env: dev
 spec:
   selector:
-    app: team3-flask
+    app: demo-flask-backend

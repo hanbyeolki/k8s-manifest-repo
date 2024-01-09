@@ -15,7 +15,7 @@ spec:
         app: team3-flask
     spec:
       containers:
-      - name: nginx-flask-proxy
+      - name: team3-flask
         image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask
         imagePullPolicy: Always
         ports:
