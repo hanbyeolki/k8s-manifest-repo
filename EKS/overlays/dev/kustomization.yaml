@@ -4,9 +4,12 @@ images:
 - name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-aws
   newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-aws
   newTag: 559ca7ac
+- name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-aws
+  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-aws
+  newTag: b97ea98c
 - name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx-aws
-  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx-aws
-  newTag: 559ca7ac
+  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/
+  newTag: b97ea98c
 resources:
 - ../../base
 patchesStrategicMerge:

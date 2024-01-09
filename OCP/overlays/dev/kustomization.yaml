@@ -3,10 +3,10 @@ kind: Kustomization
 images:
 - name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-openshift
   newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-openshift
-  newTag: 74a7faf8
+  newTag: b97ea98c
 - name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx-openshift
   newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx-openshift
-  newTag: 559ca7ac
+  newTag: b97ea98c
 resources:
 - ../../base
 patchesStrategicMerge:
