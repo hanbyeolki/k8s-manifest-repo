@@ -19,3 +19,13 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: aws-secret-volume
+          mountPath: "/home/aws/credentials"
+      volumes:
+        - name: aws-secret-volume
+          secret:
+            secretName: aws-credentials
+      imagePullSecrets:
+      - name: ecr-registry
+      - name: aws-credentials
