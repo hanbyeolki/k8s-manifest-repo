@@ -1,0 +1,13 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: team3-flask-hpa
+  namespace: team3
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: team3-flask
+  minReplicas: 3
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 30

@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: team3-flask
+  namespace: team3
+  labels:
+    env: dev
+spec:
+  selector:
+    matchLabels:
+      app: team3-flask
+  template:
+    metadata:
+      labels:
+        app: team3-flask

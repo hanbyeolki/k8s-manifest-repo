@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: team3-flask
+  namespace: team3
+spec:
+  selector:
+    matchLabels:
+      app: team3-flask
+  template:
+    metadata:
+      labels:
+        app: team3-flask
+    spec:
+      imagePullSecrets:
+        - name: ecr-registry
+      containers:
+        - name: team3-flask
+          image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-openshift
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
+          volumeMounts:
+            - name: aws-secret-volume
+              mountPath: "/home/aws/credentials"
+              readOnly: true
+      volumes:
+        - name: aws-secret-volume
+          secret:
+            secretName: aws-credentials

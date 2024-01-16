@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-flask-proxy
+  namespace: team3
+spec:
+  selector:
+    matchLabels:
+      app: nginx-flask-proxy
+  template:
+    metadata:
+      labels:
+        app: nginx-flask-proxy
+    spec:
+      imagePullSecrets:
+        - name: ecr-registry
+      containers:
+        - name: nginx-flask-proxy
+          image: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx-openshift
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8001
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
+          volumeMounts:
+            - name: aws-secret-volume
+              mountPath: "/home/aws/credentials"
+              readOnly: true
+      volumes:
+        - name: aws-secret-volume
+          secret:
+            secretName: aws-credentials

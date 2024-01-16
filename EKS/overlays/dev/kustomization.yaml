@@ -1,0 +1,18 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-aws
+  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-flask-aws
+  newTag: d97036b5
+- name: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx-aws
+  newName: 447079561480.dkr.ecr.ap-northeast-2.amazonaws.com/team3-nginx-aws
+  newTag: d97036b5
+resources:
+- ../../base
+patchesStrategicMerge:
+- flask-deployment-patch.yaml
+- flask-service-patch.yaml
+- nginx-deployment-patch.yaml
+- nginx-service-patch.yaml
+- flask-hpa-patch.yaml
+- nginx-hpa-patch.yaml
